@@ -62,3 +62,7 @@ function newElement() {
   }
 }
 
+if(localStorage.getItem('listSave')) {
+  checkedList.innerHTML = localStorage.getItem('listSave');
+}
+
