@@ -29,6 +29,7 @@ function toLocal() {
 checkedList.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
+    toLocal();
   }
 }, false);
 
@@ -51,6 +52,7 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  toLocal();
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
