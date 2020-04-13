@@ -22,6 +22,10 @@ for (i = 0; i < close.length; i++) {
 // Добавляем символ "выполнено" когда кликаем на элемент в списке
 var checkedList = document.querySelector('ul');
 var listSave;
+function toLocal() {
+  listSave = checkedList.innerHTML;
+  localStorage.setItem('listSave', listSave);
+}
 checkedList.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
